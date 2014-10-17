@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_categories/models/fields" >
+		
+	</fieldset>
+
+	<fields name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+		<fieldset name="jmetadata"
+			label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+			<field  type="spacer" />
+			<field name="magentoLabel" label="Magento Products" type="spacer" />
+			<field name="magento_override" type="list" default="0" label="Configs" description="">
+					<option value="0">Use Module Settings</option>
+					<option value="1">Use Settings Below</option>
+				</field>
+			<field name="magento_limit" type="list" default="3" label="Limit" description="Limit the number of items to receive">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="magento_attribute_filter" type="list" default="0" label="Attribute Filter" description="">
+					<option value="sku">Product SKU</option>
+					<option value="name">Product name</option>
+					<option value="url_key">friendly URL path for the product</option>
+					<option value="description">Product description</option>
+					<option value="short_description">Product short description</option>
+					<option value="meta_keyword">Product meta keywords</option>
+					<option value="manufacturer">Manufacturer</option>
+				</field>
+
+				<field name="magento_filter_type" type="list" default="0" label="Filter Type" description="">
+					<option value="like">Like</option>
+					<option value="nlike">Not Like</option>
+					<option value="neq">Not equal to</option>
+					<option value="in">equals any of</option>
+					<option value="nin">not equals any of</option>
+					<option value="gt">greater than</option>
+					<option value="lt">less than</option>
+				</field>
+				<field name="magento_value" type="text" default="" label="Value" />
+
+				<field name="magento_order" type="list" default="0" label="Ordering" description="">
+					<option value="dsc">Descending</option>
+					<option value="asc">Assending</option>
+				</field>
+
+				<field
+					name="magento_api_url"
+					type="text"
+					label="API BASE"
+					default="https://test.musculardevelopmentstore.com/api/rest/products/" />
+
+
+
+		</fieldset>
+	</fields>
+	<!-- These fields are used to get labels for the Content History Preview and Compare Views -->
+	<fields>
+		<field name="introtext" label="COM_CONTENT_FIELD_INTROTEXT" />
+		<field name="fulltext" label="COM_CONTENT_FIELD_FULLTEXT" />
+	</fields>
+
+</form>

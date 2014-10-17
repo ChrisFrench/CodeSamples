@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content">
+<name>Magento</name>
+<creationDate>January 2014</creationDate>
+<author>Chris French</author>
+<authorEmail>chris@ammonitenetworks.com</authorEmail>
+<authorUrl>ammonitenetworks.com</authorUrl>
+<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+<version>Version of the plugin</version>
+<description>Description of the Plugin; showed with installation and when editing 
+the Plugin in the Plugin Manager</description>
+<files>
+   <filename plugin="magento">magento.php</filename>
+</files>
+<config>
+        <fields name="params">
+                <fieldset name="basic">
+                        <field name="field1" type="text"
+                                description="Example field 1"
+                                label="Example field 1"
+                        />
+                </fieldset>
+        </fields>
+</config>
+</extension>

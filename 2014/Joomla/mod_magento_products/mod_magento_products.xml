@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module" version="3.0" client="site" method="upgrade">
+	<name>Magento - Products</name>
+	<author>Ammonitenetworks</author>
+	<authorEmail>chris@ammonitenetworks.com</authorEmail>
+	<authorUrl>http://www.ammonitenetworks.com</authorUrl>
+	<version>0.10.1</version>
+	<creationDate>October 2011</creationDate>
+	<copyright>2013 Ammonitenetworks.com</copyright>
+	<license>GNU General Public License</license>
+	<description>MOD_MAGENTO_PRODUCTS_MODULEDESC</description>
+	<files>
+		<filename module="mod_magento_products">mod_magento_products.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_magento_products.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="limit" type="list" default="3" label="Limit" description="Limit the number of items to receive">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="attribute_filter" type="list" default="0" label="Attribute Filter" description="">
+					<option value="sku">Product SKU</option>
+					<option value="name">Product name</option>
+					<option value="url_key">friendly URL path for the product</option>
+					<option value="description">Product description</option>
+					<option value="short_description">Product short description</option>
+					<option value="meta_keyword">Product meta keywords</option>
+					<option value="manufacturer">Manufacturer</option>
+				</field>
+
+				<field name="filter_type" type="list" default="0" label="Filter Type" description="">
+					<option value="like">Like</option>
+					<option value="nlike">Not Like</option>
+					<option value="neq">Not equal to</option>
+					<option value="in">equals any of</option>
+					<option value="nin">not equals any of</option>
+					<option value="gt">greater than</option>
+					<option value="lt">less than</option>
+				</field>
+				<field name="value" type="text" default="" label="value" />
+
+				<field name="order" type="list" default="0" label="Ordering" description="">
+					<option value="dsc">Descending</option>
+					<option value="asc">Assending</option>
+				</field>
+
+				<field
+					name="api_url"
+					type="text"
+					label="API BASE"
+					default="https://test.musculardevelopmentstore.com/api/rest/products/" />
+
+
+			</fieldset>
+			
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

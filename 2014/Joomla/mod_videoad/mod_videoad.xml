@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site">
+	<name>mod_videoad</name>
+	<author>Chris French</author>
+	<creationDate>September 2014</creationDate>
+	<copyright>Copyright (C) 2005 - 2014 Ammonite Networks. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>chris@ammonitenetworks.com</authorEmail>
+	<authorUrl>www.ammonitenetworks.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Display Video Ads by extending content</description>
+	
+	
+
+	<files>
+		<filename module="mod_videoad">mod_videoad.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+		<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="youtube_id"
+					type="text"
+					class=""
+					label="Youtube Video ID"
+					description="The ID of the video"
+					default="0">
+					
+				</field>
+				<field
+					name="link"
+					type="text"
+					class=""
+					label="AD Link"
+					description="Makes the background image a link"
+					default="">
+					
+				</field>
+				<field
+					name="enable_cookie"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					label="Enable Cookie"
+					description="Uses cookie to only show ad one time per session"
+					default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="close_seconds"
+					type="list"
+					class=""
+					label="Seconds to delay Close Button"
+					description=""
+					default="1">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</field>
+				<field
+					name="wrapper_height"
+					type="text"
+					class=""
+					label="Background of Video Height"
+					description="This is so you can extend the video greater than the height of the video (use 900px, or 80%)"
+					default="">
+					
+				</field>
+				<field
+					name="width"
+					type="text"
+					class=""
+					label="Video Width"
+					description="The Width of the video"
+					default="425">
+					</field>
+				<field
+					name="height"
+					type="text"
+					class=""
+					label="Video Height"
+					description="The height of the video"
+					default="356">
+					
+				</field>
+				<field
+					name="customcss"
+					type="textarea"
+					class=""
+					label="Custom CSS"
+					description="add some CSS to this module"
+					default="">
+					
+				</field>
+				<field name="backgroundimage" type="media"
+					label="Background For video" description="" />
+				
+				<field name="placeholder" type="media"
+					label="Place Holder Ad" description="This is the graphic that will replace ad." />
+		
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
