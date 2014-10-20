@@ -1,0 +1,1 @@
+You are in the Attendee Registration role tap bands to register attendees at your event
